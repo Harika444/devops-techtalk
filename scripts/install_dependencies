@@ -3,12 +3,12 @@
 set -e
 
 CATALINA_HOME=/usr/share/tomcat7-codedeploy
-TOMCAT_VERSION=7.0.96
+TOMCAT_VERSION=7.0.77
 
 # Tar file name
 TOMCAT7_CORE_TAR_FILENAME="apache-tomcat-$TOMCAT_VERSION.tar.gz"
 # Download URL for Tomcat7 core
-TOMCAT7_CORE_DOWNLOAD_URL="http://www-eu.apache.org/dist/tomcat/tomcat-7/v7.0.96/bin/apache-tomcat-7.0.96.tar.gz"
+TOMCAT7_CORE_DOWNLOAD_URL="http://mirror.olnevhost.net/pub/apache/tomcat/tomcat-7/v$TOMCAT_VERSION/bin/$TOMCAT7_CORE_TAR_FILENAME"
 # The top-level directory after unpacking the tar file
 TOMCAT7_CORE_UNPACKED_DIRNAME="apache-tomcat-$TOMCAT_VERSION"
 
@@ -49,7 +49,6 @@ cat > /etc/init.d/tomcat7 <<'EOF'
 PATH=$JAVA_HOME/bin:$PATH
 export PATH
 CATALINA_HOME='/usr/share/tomcat7-codedeploy'
-
 case $1 in
 start)
 sh $CATALINA_HOME/bin/startup.sh
