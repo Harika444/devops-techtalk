@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: ./SampleMavenTomcatApp.war
+  - source: target/SampleMavenTomcatApp.war
     destination: /tmp/
 hooks:
   ApplicationStop:
