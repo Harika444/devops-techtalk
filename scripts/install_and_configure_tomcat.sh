@@ -2,6 +2,6 @@
 
 set -e
 
-yum install tomcat8 -y
-chkconfig --level 345 tomcat8 on
-service tomcat8 start 
+sudo amazon-linux-extras install tomcat8.5 
+chkconfig --level 345 tomcat8.5 on
+service tomcat8.5 start 
