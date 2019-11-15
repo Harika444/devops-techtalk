@@ -2,4 +2,4 @@
 
 set -e
 
-mv /tmp/SampleMavenTomcatApp.war /usr/share/tomcat8/webapps
+mv /tmp/SampleMavenTomcatApp.war /usr/share/tomcat/webapps
