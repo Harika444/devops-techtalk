@@ -5,7 +5,7 @@ files:
     destination: /tmp/
 hooks:
   ApplicationStop:
-    - location: scripts/stop_server.sh
+   
     - location: scripts/undeploy_application.sh
       timeout: 300
       runas: root
